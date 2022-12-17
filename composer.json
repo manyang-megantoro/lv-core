@@ -1,0 +1,54 @@
+{
+    "name": "atapx/lv-core",
+    "description": "Laravel Boilerplate Admin Application",
+    "keywords": [
+        "atapx",
+        "lv-core"
+    ],
+    "homepage": "https://github.com/atapx/lv-core",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Manyang Megantoro",
+            "email": "manyang.megantoro@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Atapx\\LvCore\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Atapx\\LvCore\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Atapx\\LvCore\\LvCoreServiceProvider"
+            ],
+            "aliases": {
+                "LvCore": "Atapx\\LvCore\\LvCoreFacade"
+            }
+        }
+    }
+}
